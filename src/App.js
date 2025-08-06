@@ -14,8 +14,6 @@ function App() {
         <div>Alterar</div>
       </div>
       <div>
-
-
       </div>
     </div>
   );
