@@ -1,0 +1,7 @@
+@import './root.css';
+
+.App {
+  background-color: var(--generalBackground);
+  height: 100vh;
+}
+
