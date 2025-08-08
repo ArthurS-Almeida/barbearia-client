@@ -1,20 +1,10 @@
 import './styles/App.css';
+import AppRoutes from './routes/routes';
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <div>Agendamento</div>
-        <div>Nome</div>
-        <div>Sair</div>
-      </header>
-      <div>
-        <div>Marcar</div>
-        <div>Cancelar</div>
-        <div>Alterar</div>
-      </div>
-      <div>
-      </div>
+      <AppRoutes/>
     </div>
   );
 }
