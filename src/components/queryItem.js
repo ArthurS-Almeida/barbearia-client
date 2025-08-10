@@ -1,13 +1,13 @@
 import '../styles/queryItem.css'
-
-function Scheduled(){ // Agendados
+// Agendados
+function Scheduled({nome,hora,dia}){ // PARAMETROS PARA NOME, HORA, DIA
     return(
         <div id='baseScheduled'>
-            <div>
-                <div>Nome</div>
-                <div><span>HORA</span><span>dia</span></div>
+            <div id="container-baseDados">
+                <h1>{nome}</h1>
+                <div><span>{hora}</span><span>{dia}</span></div>
             </div>
-            <div>
+            <div id="base-buttons">
                 <button>Confirmar</button>
                 <button>Reagendar</button>
                 <button>Cancelar</button>
