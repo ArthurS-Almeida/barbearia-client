@@ -1,3 +1,13 @@
+@import './add.css';
+
 :root{
-    --generalBackground: #c6d3dd;
+    --generalBackground: #ffffff;
+    --addBackground: rgb(236, 236, 236);
+
+    --inputAdd:white;
+    --inputAddActive:rgb(252, 252, 252);
+    --inputSubmit: #1d7fff;
+    --inputSubmitHover: #186ad4;
+
+    --colorText: white;
 }

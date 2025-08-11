@@ -1,13 +1,19 @@
+import { useState } from "react";
+import Add from "../components/add";
 import Scheduled from "../components/queryItem";
+import "../styles/homePage.css"
+
 function HomePage() {
+    const msgEmpty = 'Não há agendamentos no momento...'
+    const [stateMsg,setStateMsg] = useState(Add)
     return (
-        <div>
-            <div>
-                <Scheduled/>
+        <div id="containerHomePage">
+            <div id="homePage">
+                {msgEmpty}
+                {stateMsg}
+                
             </div>
-            <div>
-            
-            </div>
+                <button id="button-add">Adicionar</button>
         </div>
     );
 }
