@@ -69,7 +69,7 @@
         cursor: pointer;
         height: 40px;
         font-size: 20px;
-        padding-right: 30px;
+        padding-right: 30px; padding-left: 10px;
         border:0px;
         transition: 00.2s ease;
         border-radius: 5px;
@@ -98,7 +98,7 @@
     
     
     >input[type="time"] {
-        padding-right: 30px;
+        padding-right: 30px; padding-left: 10px;
         border:0px;
         width: 100%;
         background: url('../assets/material-symbols--timer-outline.svg') no-repeat right 20px center;
