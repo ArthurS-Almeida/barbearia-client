@@ -1,7 +1,90 @@
-#baseScheduled{
+#baseScheduled {
+    padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
-    max-width: 400px;
+    min-width: 300px;  max-width: 400px;
+    min-height: 170px;
+    background-color: white;
+    border-radius: 5px;
+    border-color: gray;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.151);
 }
+
+#container-baseDados {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        text-align: center;
+    }
+    span{
+        font-size: 12px;
+        color: rgb(161, 160, 160);
+
+    }
+}
+
+#container-dataHora{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#base-buttons {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    #buttonConfirmar{
+        background-color: #00e70c;
+        color: white;
+        border: 1px solid #00e70c;
+        transition: 0.2s ease;
+    }
+    #buttonConfirmar:hover{
+        transform: scale(1.1);
+    }
+    
+    #buttonReagendar{
+        background-color: white;
+        color: #005eeb;
+        transition: 0.2s ease;
+    }
+    
+    #buttonReagendar:hover{
+        background-color: #005eeb;
+        color: white;
+        transform: scale(1.1);
+    }
+    
+    #buttonCancel{
+        background-color: white;
+        color: #ff0000;
+        transition: 0.2s ease;
+    }
+    #buttonCancel:hover{
+        transform: scale(1.1);
+        background-color: #ff0000;
+        color: white;
+    }
+    
+    .buttonComponent{
+        width: 100px; 
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid;
+    }
+}
+

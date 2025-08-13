@@ -1,16 +1,16 @@
 import '../styles/queryItem.css'
-
-function Scheduled(){ // Agendados
+// Agendados
+function Scheduled({nome,hora,dia}){ // PARAMETROS PARA NOME, HORA, DIA
     return(
         <div id='baseScheduled'>
-            <div>
-                <div>Nome</div>
-                <div><span>HORA</span><span>dia</span></div>
+            <div id="container-baseDados">
+                <h1>{nome}</h1>
+                <div id='container-dataHora'><span>{hora}</span><span>{dia}</span></div>
             </div>
-            <div>
-                <button>Confirmar</button>
-                <button>Reagendar</button>
-                <button>Cancelar</button>
+            <div id="base-buttons">
+                <button className='buttonComponent' id='buttonConfirmar'>Confirmar</button>
+                <button className='buttonComponent' id='buttonReagendar'>Reagendar</button>
+                <button className='buttonComponent' id='buttonCancel'>Cancelar</button>
             </div>
         </div>
     );

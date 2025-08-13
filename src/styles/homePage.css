@@ -1,0 +1,20 @@
+#containerHomePage{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#homePage{
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button-add{
+    width: max-content;
+    position: fixed;
+    top: 95%; right: 50%; left: 50%;
+}
