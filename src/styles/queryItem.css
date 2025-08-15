@@ -1,18 +1,18 @@
-#baseScheduled {
+#baseScheduled { /* Conteiner da caixa de agendamento*/
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    min-width: 300px;  max-width: 400px;
-    min-height: 170px;
+    min-width: 300px;  max-width: 500px;
+    height: 150px;
     background-color: white;
     border-radius: 5px;
     border-color: gray;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.151);
 }
 
-#container-baseDados {
+#container-baseDados { /* Container para nome, data e hora*/
     height: 100px;
     width: 100%;
     display: flex;
@@ -20,16 +20,11 @@
     
     justify-content: space-between;
 
-    h1 {
+    h1 { /*Nome*/
         margin: 0;
         padding: 0;
         font-size: 20px;
         text-align: center;
-    }
-    span{
-        font-size: 12px;
-        color: rgb(161, 160, 160);
-
     }
 }
 
@@ -37,6 +32,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    span{ /* Data e nome */
+        font-size: 12px;
+        color: rgb(161, 160, 160);
+    }
 }
 
 #base-buttons {

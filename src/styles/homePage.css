@@ -1,9 +1,18 @@
-#containerHomePage{
+
+/* BASE DA PÁGINA*/
+#containerHomePage{ 
+    background-color: var(--generalBackground);
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
+/* HEADER  */
+
+
+
+/* ABA MAIN */
 
 #homePage{
     padding: 10px;
@@ -11,10 +20,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('https://www.canva.com/40206ec1-31f6-4e06-8510-caafd970dd94');
 }
+
+
 
 #button-add{
     width: max-content;
-    position: fixed;
-    top: 95%; right: 50%; left: 50%;
 }
