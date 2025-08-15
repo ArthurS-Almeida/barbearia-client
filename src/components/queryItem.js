@@ -4,8 +4,8 @@ function Scheduled({nome,hora,dia}){ // PARAMETROS PARA NOME, HORA, DIA
     return(
         <div id='baseScheduled'>
             <div id="container-baseDados">
-                <h1>{nome}</h1>
-                <div id='container-dataHora'><span>{hora}</span><span>{dia}</span></div>
+                <h1>{nome}a</h1>
+                <div id='container-dataHora'><span>{hora}a</span><span>{dia}a</span></div>
             </div>
             <div id="base-buttons">
                 <button className='buttonComponent' id='buttonConfirmar'>Confirmar</button>
