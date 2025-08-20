@@ -4,14 +4,15 @@ import Scheduled from "../components/queryItem";
 import "../styles/homePage.css"
 
 function HomePage() {
-    
-    // Ativando opção de Add
-    const [AddClient, setAddClient] = useState(null);
+
+    // Definindo variavel que irá receber nome do barbeiro
+    let nameBarbeiro = "Nome"
+
+    // ABRIR E FECHAR COMPONENTE
+    const [AddClient, setAddClient] = useState(false);
 
     const abrirAdd = () => {
-        if (AddClient == null) {
-            setAddClient(Add);
-        }
+        setAddClient(!AddClient)
     }
 
     // Array para mostrar agendamentos marcados
@@ -20,49 +21,45 @@ function HomePage() {
     // Solicitar informações para o banco
     useEffect(() => {
         fetch("") // ROTA
-        .then((res) => res.json()) //Retorno do back
-            .then((data) => {
-
-                if(data.length === 0 ){
-                    setAppointments(<p key="vazio">Não há agendamentos no momento.</p>)
-                } else{
-
-                    const newCompApoint = data.map((a) => ( // Retorna informações solicitadas
-
-                        <Scheduled key={a.id}
-                        client={a.client}
-                        hours={a.hours}
-                        day={a.day} />
-                    ));
-                    setAppointments(newCompApoint); // Salva informação na variavel Appointments
-                }
-            })
-            .catch((err)=>console.error(err)); // Se der erro, apresente no console o erro
-    },[]);
+            .then((res) => res.json()) //Retorno do back
+            .then((data) => setAppointments(data))
+            .catch(() => console.error([])); // Se der erro, apresente no console o erro
+    }, []);
 
     return (
         <div id="containerHomePage">
             {AddClient}
-            <header>
-                <span>Barbearia Premium</span>
+            <header id="header">
                 <div>
-                    <span>Admin</span>{/* RECEBER DADOS SOBRE NOME*/}
+                    <span className="textHeader">Barbeiro {nameBarbeiro}</span>{/* RECEBER DADOS SOBRE NOME*/} <img src="" />
                 </div>
             </header>
 
             <main id="homePage">
 
                 <div id="container-agendados">
-                    {Appointments}
+                    <div id="agendados">
+                        {
+                            Appointments.length === 0 ? (
+                                <div id="containerMsgEmpty">
+                                    <p id="msgEmpty">Não há agendamentos no momento...</p>
+                                </div>
+                            ) : (
+                                Appointments.map(a => <Scheduled nome={a.nome} dia={a.dia} hora={a.hora} />)
+                            )
+                        }
+                        <Scheduled />
+
+                    </div>
                 </div>
-                <div>
-                    <button id="button-add" onClick={abrirAdd}>Adicionar</button>
-                    <button> Inativar data</button>
+                <div id="container-buttonHomerPage">
+                    <button className="button-HomePage" id="button-add" onClick={abrirAdd}>Adicionar</button>
+                    <button className="button-HomePage" id="button-inativo"> Inativar data</button>
                 </div>
-                {AddClient}
+                {AddClient && <Add onClose={abrirAdd} />}
             </main>
             <footer>
-                <p>DESENVOLVIDO POR ARTHUR2SANTOS</p>
+                <p>DESENVOLVIDO POR ARTHURVCODE</p>
             </footer>
         </div>
     );

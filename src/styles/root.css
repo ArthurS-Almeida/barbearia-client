@@ -1,9 +1,13 @@
 @import './add.css';
+@import './queryItem.css';
 
 :root{
     --generalBackground: #3d3f49;
     --addBackground: #ececec;
-    --compBackground: #d9d9d9;
+    --compBackground: #ebebeb;
+    --agendBackground: #d9d9d9;
+
+    --agendBorder: #a6a6a6;
 
     --inputAdd:white;
     --inputAddActive:rgb(252, 252, 252);
@@ -11,4 +15,8 @@
     --inputSubmitHover: #186ad4;
 
     --colorText: white;
+    --colorTextHeader: white;
+
+    --buttonAddColor: #0cc0df;
+    --buttonInativoColor: #ffde59;
 }
